@@ -131,7 +131,7 @@
         </div>
 
         <h1>Política de Privacidad - The Multitrack Player</h1>
-        <p class="last-updated"><strong>Última actualización:</strong> 3 de febrero de 2026</p>
+        <p class="last-updated"><strong>Última actualización:</strong> 20 de abril de 2026</p>
 
         <div class="section">
             <h2>1. Introducción</h2>
@@ -155,11 +155,14 @@
             <h3>2.2 Datos de Uso y Analytics</h3>
             <p>A través de Firebase Analytics, recopilamos:</p>
             <ul>
-                <li>Eventos de autenticación (inicio de sesión, cierre de sesión, eliminación de cuenta)</li>
-                <li>Patrones de uso de la aplicación</li>
-                <li>Información sobre errores y fallos</li>
-                <li>Estadísticas de uso de funcionalidades</li>
+                <li>Eventos de autenticación (inicio de sesión, cierre de sesión, eliminación de cuenta) — incluyendo correo electrónico e ID de usuario</li>
+                <li>Eventos de interacción con contenido: nombres de multitrack, nombres de pistas y nombres de listas de reproducción</li>
+                <li>Ajustes de reproducción: valores de transposición de tono, niveles de volumen de pistas, estado del bucle</li>
+                <li>Actividad de exportación: formato del archivo y duración del audio exportado</li>
+                <li>Cambios de enrutamiento de audio (índice de bus de salida)</li>
+                <li>Vistas de pantalla y patrones generales de navegación</li>
                 <li>Información del dispositivo (modelo, sistema operativo, versión de la app)</li>
+                <li>Ubicación aproximada (país y ciudad, derivada automáticamente por Firebase a partir del idioma del dispositivo y la dirección IP)</li>
             </ul>
 
             <h3>2.3 Proyectos Multitrack y Archivos de Audio</h3>
@@ -175,17 +178,34 @@
                 <li>Configuraciones de pistas (volumen, panorámica, silencio, orden)</li>
                 <li>Nombres de multitrack y proyectos</li>
                 <li>Información de sesión de usuario</li>
-                <li>Preferencias de usuario</li>
+                <li>Preferencias de usuario (auto-panorámica, retardo de reproducción automática, zoom de forma de onda, volumen inicial, auto-color)</li>
+                <li>Preferencia de apariencia de la app (modo oscuro, claro o del sistema)</li>
                 <li>ID de usuario único (vinculado al proveedor de autenticación)</li>
             </ul>
         </div>
+
+        <div class="section">
+            <h3>2.5 Navegador Web Integrado</h3>
+            <p>La función de búsqueda de acordes incluye un navegador web integrado (WKWebView) que puede cargar cualquier sitio web externo. Sobre este navegador:</p>
+            <ul>
+                <li>La aplicación <strong>no</strong> registra, almacena ni transmite las URLs que usted visita</li>
+                <li>Los sitios web externos que visita tienen sus propias políticas de privacidad y pueden utilizar cookies, rastreadores u otras tecnologías de recopilación de datos de forma independiente a esta aplicación</li>
+                <li>Cuando elige importar contenido de acordes, la aplicación envía una solicitud de red al sitio web actualmente visualizado para extraer ese contenido — no se incluyen datos personales ni credenciales en estas solicitudes</li>
+                <li>Usted es responsable de revisar las políticas de privacidad de los sitios externos que elija visitar</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>2.6 Videos Tutoriales</h3>
+            <p>La aplicación incluye una sección de tutoriales que reproduce videos mediante un reproductor de YouTube integrado (WKWebView). YouTube es operado por Google LLC y puede recopilar datos de acuerdo con la <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de Google</a>.</p>
 
         <div class="section">
             <h2>3. Cómo Utilizamos su Información</h2>
             <p>Utilizamos la información recopilada para:</p>
             <ul>
                 <li><strong>Autenticación:</strong> Verificar su identidad y gestionar su sesión</li>
-                <li><strong>Funcionalidad:</strong> Proporcionar las características de la aplicación (reproducción de audio, gestión de tracks)</li>
+                <li><strong>Funcionalidad:</strong> Proporcionar las características de la aplicación (reproducción de audio, gestión de tracks, transposición de tono)</li>
+                <li><strong>Exportación:</strong> Procesar su proyecto multitrack localmente en su dispositivo para generar un archivo de audio en el formato que elija</li>
                 <li><strong>Mejora del Servicio:</strong> Analizar el uso de la aplicación para mejorar la experiencia del usuario</li>
                 <li><strong>Resolución de Problemas:</strong> Identificar y solucionar errores técnicos</li>
                 <li><strong>Comunicación:</strong> Enviar notificaciones importantes sobre la aplicación (si aplica)</li>
@@ -225,6 +245,15 @@
                 </ul>
             </div>
 
+            <div class="highlight">
+                <p><strong>Firebase Remote Config:</strong></p>
+                <ul>
+                    <li>Proveedor: Google LLC / Firebase</li>
+                    <li>Propósito: Configuración de indicadores de funcionalidades (controla qué funciones están activas sin requerir una actualización de la app)</li>
+                    <li>Política de privacidad: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+                </ul>
+            </div>
+
             <h3>4.2 No Vendemos sus Datos</h3>
             <p>No vendemos, alquilamos ni compartimos su información personal con terceros para fines de marketing.</p>
 
@@ -239,6 +268,7 @@
             <ul>
                 <li>Los datos de la aplicación se almacenan localmente en su dispositivo usando CoreData y UserDefaults</li>
                 <li>Los archivos de audio permanecen en su dispositivo y no se sincronizan con servidores externos</li>
+                <li>Los archivos de audio exportados se generan completamente en su dispositivo y solo se comparten externamente cuando usted lo elige explícitamente mediante la hoja de compartir de iOS</li>
             </ul>
 
             <h3>5.2 Seguridad</h3>
@@ -246,7 +276,7 @@
             <ul>
                 <li>Uso de protocolos seguros (HTTPS) para comunicaciones</li>
                 <li>Almacenamiento seguro de datos de sesión</li>
-                <li>Autenticación mediante servicios confiables (Google Sign-In)</li>
+                <li>Autenticación mediante servicios confiables (Google Sign-In y Sign in with Apple)</li>
             </ul>
             <p>Sin embargo, ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro.</p>
         </div>
@@ -323,6 +353,18 @@
             <ul>
                 <li><strong>Email:</strong> <a href="mailto:multitrack-player-app@outlook.com">multitrack-player-app@outlook.com</a></li>
                 <li><strong>Desarrollador:</strong> Esteban Triviño</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>12. Declaraciones Adicionales</h2>
+            <ul>
+                <li><strong>No recopilamos información financiera:</strong> La aplicación no procesa pagos ni almacena información de tarjetas de crédito</li>
+                <li><strong>No accedemos a contactos:</strong> No solicitamos acceso a la lista de contactos del dispositivo</li>
+                <li><strong>No accedemos a la ubicación:</strong> No recopilamos datos de ubicación geográfica de forma activa</li>
+                <li><strong>No accedemos a la cámara/fotos:</strong> Solo accedemos a archivos de audio a través del selector de documentos del sistema</li>
+                <li><strong>No rastreamos entre aplicaciones:</strong> No rastreamos su actividad en otras aplicaciones o sitios web</li>
+                <li><strong>Navegador integrado:</strong> El navegador de acordes puede cargar cualquier sitio web externo; esos sitios pueden tener sus propias tecnologías de seguimiento que están fuera de nuestro control</li>
             </ul>
         </div>
 

@@ -127,7 +127,7 @@
             <a href="privacy-es.html" style="color: #007AFF; text-decoration: none;">🇪🇸 Español</a>
         </div>
         <h1>Privacy Policy - The Multitrack Player</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> February 3, 2026</p>
+        <p class="last-updated"><strong>Last Updated:</strong> April 20, 2026</p>
 
         <div class="section">
             <h2>1. Introduction</h2>
@@ -151,11 +151,14 @@
             <h3>2.2 Usage and Analytics Data</h3>
             <p>Through Firebase Analytics, we collect:</p>
             <ul>
-                <li>Authentication events (login, logout, account deletion)</li>
-                <li>Application usage patterns</li>
-                <li>Error and crash information</li>
-                <li>Feature usage statistics</li>
+                <li>Authentication events (login, logout, account deletion) — including email address and user ID</li>
+                <li>Content interaction events: multitrack names, track names, and playlist names</li>
+                <li>Playback settings: pitch transposition values, track volume levels, loop state</li>
+                <li>Export activity: file format and duration of exported audio</li>
+                <li>Audio routing changes (output bus index)</li>
+                <li>Screen views and general navigation patterns</li>
                 <li>Device information (model, operating system, app version)</li>
+                <li>Approximate location (country and city, derived automatically by Firebase from device locale and IP address)</li>
             </ul>
 
             <h3>2.3 Multitrack Projects and Audio Files</h3>
@@ -171,17 +174,34 @@
                 <li>Track configurations (volume, pan, mute, order)</li>
                 <li>Multitrack and project names</li>
                 <li>User session information</li>
-                <li>User preferences</li>
+                <li>User preferences (auto-pan, auto-play delay, waveform zoom, initial volume, auto-color)</li>
+                <li>App appearance preference (dark, light, or system mode)</li>
                 <li>Unique user ID (linked to authentication provider)</li>
             </ul>
         </div>
+
+        <div class="section">
+            <h3>2.5 In-App Web Browser</h3>
+            <p>The chord browser feature includes an in-app web browser (WKWebView) that can load any external website. Regarding this browser:</p>
+            <ul>
+                <li>The application does <strong>not</strong> record, log, or transmit the URLs you visit</li>
+                <li>External websites you visit have their own privacy policies and may use cookies, trackers, or other data collection technologies independent of this application</li>
+                <li>When you choose to import chord content, the application sends a network request to the currently viewed website to extract that content — no personal data or credentials are included in these requests</li>
+                <li>You are responsible for reviewing the privacy policies of external websites you choose to visit</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>2.6 Tutorial Videos</h3>
+            <p>The application includes a tutorial section that embeds videos via a YouTube player (WKWebView). YouTube is operated by Google LLC and may collect data in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
 
         <div class="section">
             <h2>3. How We Use Your Information</h2>
             <p>We use the collected information to:</p>
             <ul>
                 <li><strong>Authentication:</strong> Verify your identity and manage your session</li>
-                <li><strong>Functionality:</strong> Provide application features (audio playback, track management)</li>
+                <li><strong>Functionality:</strong> Provide application features (audio playback, track management, pitch transposition)</li>
+                <li><strong>Export:</strong> Process your multitrack project locally on your device to generate an audio file in the format you choose</li>
                 <li><strong>Service Improvement:</strong> Analyze application usage to improve user experience</li>
                 <li><strong>Troubleshooting:</strong> Identify and resolve technical issues</li>
                 <li><strong>Communication:</strong> Send important notifications about the application (if applicable)</li>
@@ -221,6 +241,15 @@
                 </ul>
             </div>
 
+            <div class="highlight">
+                <p><strong>Firebase Remote Config:</strong></p>
+                <ul>
+                    <li>Provider: Google LLC / Firebase</li>
+                    <li>Purpose: Feature flag configuration (controls which features are active without requiring an app update)</li>
+                    <li>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+                </ul>
+            </div>
+
             <h3>4.2 We Do Not Sell Your Data</h3>
             <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
 
@@ -235,6 +264,7 @@
             <ul>
                 <li>Application data is stored locally on your device using CoreData and UserDefaults</li>
                 <li>Audio files remain on your device and are not synced with external servers</li>
+                <li>Exported audio files are generated entirely on your device and are only shared externally when you explicitly choose to do so via the iOS share sheet</li>
             </ul>
 
             <h3>5.2 Security</h3>
@@ -242,7 +272,7 @@
             <ul>
                 <li>Use of secure protocols (HTTPS) for communications</li>
                 <li>Secure storage of session data</li>
-                <li>Authentication through trusted services (Google Sign-In)</li>
+                <li>Authentication through trusted services (Google Sign-In and Sign in with Apple)</li>
             </ul>
             <p>However, no method of Internet transmission or electronic storage is 100% secure.</p>
         </div>
@@ -339,8 +369,14 @@
 
             <p><strong>Usage Data:</strong></p>
             <ul>
-                <li>Product interactions (linked to user identity)</li>
+                <li>Product interactions — multitrack/track/playlist names, playback actions, pitch and volume adjustments (linked to user identity)</li>
+                <li>Export activity — format and duration (linked to user identity)</li>
                 <li>Diagnostic data (linked to user identity)</li>
+            </ul>
+
+            <p><strong>Location:</strong></p>
+            <ul>
+                <li>Approximate location (country and city) — derived automatically by Firebase from device locale and IP address (linked to user identity)</li>
             </ul>
 
             <p><strong>Data Used to Track You:</strong> No</p>
@@ -363,6 +399,7 @@
                 <li><strong>We do not access location:</strong> We do not collect geographic location data</li>
                 <li><strong>We do not access camera/photos:</strong> We only access audio files through the system document picker</li>
                 <li><strong>We do not track across apps:</strong> We do not track your activity in other apps or websites</li>
+                <li><strong>In-app browser:</strong> The chord browser can load any external website; those websites may have their own tracking technologies that are outside our control</li>
             </ul>
         </div>
 
