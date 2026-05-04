@@ -127,7 +127,7 @@
             <a href="privacy-es.html" style="color: #007AFF; text-decoration: none;">🇪🇸 Español</a>
         </div>
         <h1>Privacy Policy - The Multitrack Player</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> April 20, 2026</p>
+        <p class="last-updated"><strong>Last Updated:</strong> May 3, 2026</p>
 
         <div class="section">
             <h2>1. Introduction</h2>
@@ -182,7 +182,17 @@
         </div>
 
         <div class="section">
-            <h3>2.5 In-App Web Browser</h3>
+            <h3>2.5 Advertising Data (Google AdMob)</h3>
+            <p>The application displays ads through <strong>Google AdMob</strong>. Depending on your choice in the App Tracking Transparency (ATT) consent dialog:</p>
+            <ul>
+                <li><strong>If you allow tracking:</strong> AdMob may collect your Advertising Identifier (IDFA) to show personalized ads based on your activity in other apps and websites.</li>
+                <li><strong>If you deny tracking:</strong> AdMob will show non-personalized ads without using the IDFA or tracking your cross-app activity.</li>
+            </ul>
+            <p>For users in the European Economic Area (EEA), advertising consent is managed through the <strong>Google UMP (User Messaging Platform) SDK</strong>, which presents GDPR-compliant consent forms.</p>
+        </div>
+
+        <div class="section">
+            <h3>2.6 In-App Web Browser</h3>
             <p>The chord browser feature includes an in-app web browser (WKWebView) that can load any external website. Regarding this browser:</p>
             <ul>
                 <li>The application does <strong>not</strong> record, log, or transmit the URLs you visit</li>
@@ -193,7 +203,7 @@
         </div>
 
         <div class="section">
-            <h3>2.6 Tutorial Videos</h3>
+            <h3>2.7 Tutorial Videos</h3>
             <p>The application includes a tutorial section that embeds videos via a YouTube player (WKWebView). YouTube is operated by Google LLC and may collect data in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
 
         <div class="section">
@@ -202,6 +212,7 @@
             <ul>
                 <li><strong>Authentication:</strong> Verify your identity and manage your session</li>
                 <li><strong>Functionality:</strong> Provide application features (audio playback, track management, pitch transposition)</li>
+                <li><strong>Advertising:</strong> Display relevant ads through Google AdMob. If you allow tracking (ATT), ads may be personalized. If you deny, non-personalized ads will be shown instead.</li>
                 <li><strong>Export:</strong> Process your multitrack project locally on your device to generate an audio file in the format you choose</li>
                 <li><strong>Service Improvement:</strong> Analyze application usage to improve user experience</li>
                 <li><strong>Troubleshooting:</strong> Identify and resolve technical issues</li>
@@ -248,6 +259,26 @@
                     <li>Provider: Google LLC / Firebase</li>
                     <li>Purpose: Feature flag configuration (controls which features are active without requiring an app update)</li>
                     <li>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <p><strong>Google AdMob:</strong></p>
+                <ul>
+                    <li>Provider: Google LLC</li>
+                    <li>Purpose: Advertising — displaying banner and interstitial ads within the application</li>
+                    <li>Data collected: Advertising Identifier (IDFA) if the user accepts ATT; device information for ad targeting</li>
+                    <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                    <li><strong>Note:</strong> If you deny tracking in the ATT dialog, AdMob will only show non-personalized ads without using the IDFA</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <p><strong>Google UMP SDK (User Messaging Platform):</strong></p>
+                <ul>
+                    <li>Provider: Google LLC</li>
+                    <li>Purpose: Advertising consent management for users in the European Economic Area (GDPR)</li>
+                    <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
                 </ul>
             </div>
 
@@ -380,7 +411,7 @@
                 <li>Approximate location (country and city) — derived automatically by Firebase from device locale and IP address (linked to user identity)</li>
             </ul>
 
-            <p><strong>Data Used to Track You:</strong> No</p>
+            <p><strong>Data Used to Track You:</strong> Yes — Advertising Identifier (IDFA / Device ID) when the user accepts the App Tracking Transparency (ATT) dialog. If denied, the IDFA is not used and no cross-app tracking occurs.</p>
 
             <p><strong>Data Linked to You:</strong></p>
             <ul>
@@ -389,6 +420,11 @@
                 <li>Name</li>
                 <li>Usage data</li>
                 <li>Diagnostics</li>
+            </ul>
+
+            <p><strong>Tracking Data (when user accepts ATT):</strong></p>
+            <ul>
+                <li>Device Identifier (IDFA) — used by Google AdMob for personalized advertising</li>
             </ul>
         </div>
 
@@ -399,7 +435,7 @@
                 <li><strong>We do not access contacts:</strong> We do not request access to the device's contact list</li>
                 <li><strong>We do not access location:</strong> We do not collect geographic location data</li>
                 <li><strong>We do not access camera/photos:</strong> We only access audio files through the system document picker</li>
-                <li><strong>We do not track across apps:</strong> We do not track your activity in other apps or websites</li>
+                <li><strong>Optional ad tracking:</strong> The application requests tracking permission (ATT) to show personalized ads through Google AdMob. If you deny this permission, you will still see ads, but they will not be personalized and the IDFA will not be used. You can change this preference at any time in Settings → Privacy → Tracking.</li>
                 <li><strong>In-app browser:</strong> The chord browser can load any external website; those websites may have their own tracking technologies that are outside our control</li>
             </ul>
         </div>
