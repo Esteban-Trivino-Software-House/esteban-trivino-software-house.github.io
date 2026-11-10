@@ -1,316 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Multitrack Player - Professional multitrack audio playback for iOS. Import, organize, and control multiple audio tracks with precision.">
-    <title>The Multitrack Player - Professional Audio Playback for iOS</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            color: white;
-        }
-        
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .hero .tagline {
-            font-size: 1.5em;
-            margin-bottom: 40px;
-            opacity: 0.95;
-        }
-        
-        .app-icon-hero {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 30px;
-            background: white;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 80px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 18px 40px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 1.2em;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            margin: 10px;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        }
-        
-        .cta-button.secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        /* Features Section */
-        .features {
-            background: white;
-            padding: 80px 20px;
-        }
-        
-        .features h2 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 60px;
-            color: #1a1a1a;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .feature-card {
-            text-align: center;
-            padding: 30px;
-            border-radius: 15px;
-            background: #f9f9f9;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #667eea;
-        }
-        
-        .feature-card p {
-            color: #666;
-            line-height: 1.8;
-        }
-        
-        /* About Section */
-        .about {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .about h2 {
-            font-size: 2.5em;
-            margin-bottom: 30px;
-        }
-        
-        .about p {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            line-height: 1.8;
-            opacity: 0.95;
-        }
-        
-        /* Footer */
-        .footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        .footer-links {
-            margin-bottom: 20px;
-        }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-        
-        .footer-links a:hover {
-            opacity: 1;
-        }
-        
-        .language-switch {
-            text-align: right;
-            padding: 20px;
-        }
-        
-        .language-switch a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 20px;
-            transition: background 0.3s;
-        }
-        
-        .language-switch a:hover {
-            background: rgba(255,255,255,0.3);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            
-            .hero .tagline {
-                font-size: 1.2em;
-            }
-            
-            .features h2,
-            .about h2 {
-                font-size: 2em;
-            }
-            
-            .cta-button {
-                display: block;
-                margin: 10px auto;
-                max-width: 280px;
-            }
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Run your multitrack songs live. Organize sections, shape each channel and control playback from The Multitrack Player for iPhone and iPad.">
+    <meta name="theme-color" content="#080b16">
+    <link rel="canonical" href="https://themultitrackplayer.com/">
+    <link rel="alternate" hreflang="en" href="https://themultitrackplayer.com/">
+    <link rel="alternate" hreflang="es" href="https://themultitrackplayer.com/index-es.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://themultitrackplayer.com/index-pt-br.html">
+    <link rel="alternate" hreflang="x-default" href="https://themultitrackplayer.com/">
+    <link rel="icon" href="assets/images/app-icon.jpg">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <title>The Multitrack Player — Your songs, ready for the stage</title>
 </head>
 <body>
-    <div class="language-switch">
-        <a href="index.html">🇬🇧 English</a> | <a href="index-es.html">🇪🇸 Español</a>
-    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="The Multitrack Player home">
+            <img src="assets/images/app-icon.jpg" alt="">
+            <span>The Multitrack Player</span>
+        </a>
+        <nav class="header-links" aria-label="Main navigation">
+            <a href="#features">Features</a>
+            <a href="#workflow">How it works</a>
+            <a href="support.html">Support</a>
+            <span class="language-links" aria-label="Language">
+                <a href="index.html" lang="en" aria-current="page">EN</a>
+                <a href="index-es.html" lang="es">ES</a>
+                <a href="index-pt-br.html" lang="pt-BR">PT-BR</a>
+            </span>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="app-icon-hero">🎵</div>
-            <h1>The Multitrack Player</h1>
-            <p class="tagline">Professional multitrack audio playback for iOS</p>
-            <p style="max-width: 700px; margin: 0 auto 40px; font-size: 1.1em;">
-                Import, organize, and control multiple audio tracks with precision. 
-                Perfect for musicians, audio engineers, and audio professionals.
-            </p>
-            <a href="#features" class="cta-button">Learn More</a>
-            <a href="support.html" class="cta-button secondary">Get Support</a>
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div>
+                <p class="eyebrow">The Multitrack Player</p>
+                <h1 id="hero-title">Your songs, <span>ready for the stage.</span></h1>
+                <p class="hero-copy">Keep every track in your hands. Build your set, shape the mix and move through song sections with live playback controls designed for musicians.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="https://apps.apple.com/app/id6757976520">Get it on the App Store</a>
+                    <a class="button" href="#features">Explore the features</a>
+                </div>
+                <p class="platform-note">For iPhone and iPad · Requires iOS 17 or later</p>
+            </div>
+            <figure class="hero-art">
+                <img src="assets/images/screenshots/en/concert.webp" width="1600" height="736" alt="Concert mode showing a song queue and multitrack playback controls">
+                <figcaption>A clear view of your set and your mix.</figcaption>
+            </figure>
+        </section>
+
+        <div class="trust-strip" aria-label="Designed for musicians">
+            <span>Built for live multitrack playback</span>
+            <span>Individual track control</span>
+            <span>Your projects stay on your device</span>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2>Powerful Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎚️</div>
-                    <h3>Individual Track Controls</h3>
-                    <p>Adjust volume, pan, and mute for each track independently. Fine-tune your mix with precision controls.</p>
+        <section class="page-section" id="features" aria-labelledby="features-title">
+            <div class="section-heading">
+                <p class="eyebrow">One workspace, all your parts</p>
+                <h2 id="features-title">From the first cue to the final mix.</h2>
+                <p>Prepare your songs, find the moment you need and make adjustments without losing sight of the full arrangement.</p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <figure><img src="assets/images/screenshots/en/sections.webp" width="1600" height="736" loading="lazy" alt="Song sections arranged on a multitrack timeline"></figure>
+                    <div class="feature-copy">
+                        <h3>Move through song sections</h3>
+                        <p>Organize an arrangement into named sections and jump to the part your performance needs.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <figure><img src="assets/images/screenshots/en/precision.webp" width="1600" height="736" loading="lazy" alt="Waveform and precise controls for adjusting a song section"></figure>
+                    <div class="feature-copy">
+                        <h3>Shape each cue precisely</h3>
+                        <p>Use the waveform and fine controls to set section boundaries and refine transitions.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <figure><img src="assets/images/screenshots/en/editing.webp" width="1600" height="736" loading="lazy" alt="Track mixer with individual controls and playback settings"></figure>
+                    <div class="feature-copy">
+                        <h3>Mix every channel</h3>
+                        <p>Adjust track level, pan, mute, solo and pitch, with tempo, time signature and metronome controls close at hand. When available, route tracks to separate outputs on a connected audio interface.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <figure><img src="assets/images/screenshots/en/equalizer.webp" width="1600" height="736" loading="lazy" alt="Equalizer controls for shaping the sound of a track"></figure>
+                    <div class="feature-copy">
+                        <h3>Find the right balance</h3>
+                        <p>Fine-tune a track with the built-in equalizer and keep the mix manageable as the arrangement changes.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <figure><img src="assets/images/screenshots/en/stems.webp" width="1600" height="736" loading="lazy" alt="Audio stem separation options for creating four or six tracks"></figure>
+                    <div class="feature-copy">
+                        <h3>Separate a song into stems</h3>
+                        <p>When enabled, choose a four- or six-stem separation workflow. After downloading its model, stem separation can be used offline.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <figure><img src="assets/images/screenshots/en/chords.webp" width="1600" height="736" loading="lazy" alt="Chord browser and chord sheet tools in the app"></figure>
+                    <div class="feature-copy">
+                        <h3>Keep chords with the song</h3>
+                        <p>Browse chord resources and keep a song's chord information available alongside your multitrack project.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <figure><img src="assets/images/screenshots/en/export.webp" width="1600" height="736" loading="lazy" alt="Options to export an audio mix or share a Multitrack Player project"></figure>
+                    <div class="feature-copy">
+                        <h3>Export or share a project</h3>
+                        <p>Render your mix as an audio file or share the <code>.mtp</code> project file to continue working with it.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="benefit-band">
+                <h2>More tools, when available.</h2>
+                <p>Depending on the features enabled in the app, your workflow can also include audio recording, track-volume automation, audio editing and multichannel routing to a connected interface. In-app video tutorials are available too.</p>
+            </div>
+        </section>
+
+        <section class="page-section" id="workflow" aria-labelledby="workflow-title">
+            <div class="benefit-band">
+                <h2 id="workflow-title">A practical flow for rehearsal and performance.</h2>
+                <p>Bring in audio from Files, organize tracks into a project, then use the same song controls to prepare and play your set. Your imported audio and projects are stored locally on your device.</p>
+            </div>
+            <div class="workflow-list">
+                <div class="workflow-step">
+                    <strong>01 · Bring your tracks</strong>
+                    <p>Import audio files from Files, including common formats supported by iOS.</p>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📁</div>
-                    <h3>Easy Import</h3>
-                    <p>Import audio files from your device's Files app. Supports MP3, WAV, M4A, and other common formats.</p>
+                <div class="workflow-step">
+                    <strong>02 · Prepare your arrangement</strong>
+                    <p>Arrange sections, balance tracks and keep the cues you need easy to reach.</p>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">💾</div>
-                    <h3>Save Projects</h3>
-                    <p>Save and organize your multitrack projects. Return to your mixes anytime with all settings preserved.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>High-Quality Playback</h3>
-                    <p>Professional-grade audio engine ensures pristine sound quality for all your tracks.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Privacy First</h3>
-                    <p>All audio files stay on your device. We never upload or share your content.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Native iOS Design</h3>
-                    <p>Beautiful, intuitive interface designed specifically for iOS. Easy to learn and use.</p>
+                <div class="workflow-step">
+                    <strong>03 · Take control live</strong>
+                    <p>Use concert mode, your song queue and individual track controls during playback.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2>Built for Audio Professionals</h2>
-            <p>
-                Whether you're a musician rehearsing with backing tracks, an audio engineer reviewing mixes, 
-                or anyone who needs precise control over multitrack audio playback, Multitrack Player gives 
-                you the tools you need in a clean, professional package.
-            </p>
-            <p>
-                Developed with passion for audio professionals and enthusiasts who demand reliability 
-                and precision in their iOS audio applications.
-            </p>
-            <a href="support.html" class="cta-button">Get Started</a>
-        </div>
-    </section>
+        <section class="closing" aria-labelledby="closing-title">
+            <p class="eyebrow">The Multitrack Player</p>
+            <h2 id="closing-title">Bring your full arrangement into the room.</h2>
+            <p>Explore multitrack playback and performance controls on iPhone and iPad.</p>
+            <a class="button button-primary" href="https://apps.apple.com/app/id6757976520">View on the App Store</a>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="support.html">Support</a>
-                <a href="mailto:multitrack-player-app@outlook.com">Contact</a>
-            </div>
-            <p>&copy; 2026 The Multitrack Player. All rights reserved.</p>
-            <p style="opacity: 0.7; margin-top: 10px;">Developed by Esteban Triviño</p>
-        </div>
+    <footer class="site-footer">
+        <p>© The Multitrack Player</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="privacy.html">Privacy</a>
+            <a href="support.html">Support</a>
+        </nav>
     </footer>
 </body>
 </html>
