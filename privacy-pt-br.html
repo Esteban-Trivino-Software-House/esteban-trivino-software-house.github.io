@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Política de Privacidade do app The Multitrack Player para iOS.">
+    <meta name="description" content="Política de Privacidade do aplicativo The Multitrack Player para iOS e Android">
     <meta name="theme-color" content="#080b16">
     <link rel="canonical" href="https://themultitrackplayer.com/privacy-pt-br.html">
     <link rel="alternate" hreflang="en" href="https://themultitrackplayer.com/privacy.html">
@@ -31,287 +31,321 @@
     </header>
 
     <main id="main" class="container">
-        <h1>Política de Privacidade — The Multitrack Player</h1>
-        <p class="last-updated"><strong>Última atualização:</strong> 3 de maio de 2026</p>
+        <h1>Política de Privacidade - The Multitrack Player</h1>
+        <p class="last-updated"><strong>Última atualização:</strong> 20 de novembro de 2026</p>
 
-        <section class="section">
+        <div class="section">
             <h2>1. Introdução</h2>
-            <p>Esta Política de Privacidade descreve como The Multitrack Player ("nós", "nosso" ou "o aplicativo") coleta, usa e protege as informações dos usuários ("você" ou "usuário") do nosso aplicativo móvel para iOS.</p>
+            <p>Esta Política de Privacidade descreve como The Multitrack Player ("nós", "nosso" ou "o aplicativo") coleta, usa e protege as informações dos usuários ("você" ou "usuário") do nosso aplicativo para <strong>iOS (iPhone e iPad)</strong> e <strong>Android</strong>, incluindo suas experiências no CarPlay e no Android Auto. Salvo indicação em contrário, ela se aplica igualmente às duas plataformas.</p>
             <p>Ao usar The Multitrack Player, você concorda com as práticas descritas nesta política. Se não concordar com estes termos, não use o aplicativo.</p>
-        </section>
+        </div>
 
-        <section class="section">
-            <h2>2. Informações que coletamos</h2>
-            <h3>2.1 Informações da conta</h3>
-            <p>Quando você inicia sessão com o Google Sign-In ou o recurso Iniciar sessão com a Apple, coletamos:</p>
+        <div class="section">
+            <h2>2. Informações que Coletamos</h2>
+
+            <h3>2.1 Informações da Conta</h3>
+            <p>Entrar com uma conta é opcional: você pode usar o aplicativo no modo convidado, sem conta. Quando você entra com o Google ou com a Apple, coletamos:</p>
             <ul>
                 <li>Endereço de e-mail</li>
                 <li>Nome de usuário</li>
-                <li>ID de usuário exclusivo fornecido pelo provedor de autenticação (Google ou Apple)</li>
-                <li>Foto de perfil, se disponível</li>
+                <li>ID de usuário único fornecido pelo provedor de autenticação (Google ou Apple)</li>
+                <li>Foto de perfil (se disponível)</li>
             </ul>
-            <p><strong>Observação:</strong> Ao usar o recurso Iniciar sessão com a Apple, você pode ocultar seu endereço de e-mail. Nesse caso, a Apple fornece um endereço de e-mail de retransmissão privada.</p>
+            <p>Seu nome, e-mail, ID de usuário e provedor de login ficam em um perfil de usuário no nosso banco de dados do Firebase (Cloud Firestore).</p>
+            <p><strong>Observação:</strong> Ao usar Iniciar sessão com a Apple, você pode ocultar seu e-mail. Nesse caso, a Apple fornece um endereço de retransmissão privado.</p>
 
-            <h3>2.2 Dados de uso e análise</h3>
+            <h3>2.2 Dados de Uso e Análise</h3>
             <p>Por meio do Firebase Analytics, coletamos:</p>
             <ul>
-                <li>Eventos de autenticação (login, logout e exclusão da conta), incluindo endereço de e-mail e ID de usuário</li>
-                <li>Eventos de interação com conteúdo: nomes de multitracks, faixas e listas de reprodução</li>
-                <li>Ajustes de reprodução: valores de transposição de tom, níveis de volume das faixas e estado do loop</li>
-                <li>Atividade de exportação: formato do arquivo e duração do áudio exportado</li>
-                <li>Alterações no roteamento de áudio (índice do barramento de saída)</li>
+                <li>Eventos de autenticação (login, logout, exclusão de conta), incluindo e-mail e ID de usuário</li>
+                <li>Eventos de interação com o conteúdo: nomes de multitracks, faixas e playlists</li>
+                <li>Ajustes de reprodução: valores de transposição, volume das faixas, estado do loop</li>
+                <li>Atividade de exportação: formato e duração do áudio exportado</li>
+                <li>Mudanças de roteamento de áudio (índice do barramento de saída)</li>
+                <li>Eventos de assinatura e da tela de pagamento (qual tela foi exibida, compras iniciadas ou concluídas)</li>
                 <li>Visualizações de tela e padrões gerais de navegação</li>
-                <li>Informações do dispositivo (modelo, sistema operacional e versão do app)</li>
-                <li>Localização aproximada (país e cidade), derivada automaticamente pelo Firebase a partir do idioma/região do dispositivo e do endereço IP</li>
+                <li>Informações do dispositivo (modelo, sistema operacional, versão do app) e um identificador de instância do app</li>
+                <li>Localização aproximada (país e cidade, derivada automaticamente pelo Firebase do idioma do dispositivo e do endereço IP)</li>
             </ul>
 
-            <h3>2.3 Projetos multipista e arquivos de áudio</h3>
+            <h3>2.3 Dados de Falhas e Diagnóstico</h3>
+            <p>Por meio do Firebase Crashlytics, quando o aplicativo fecha inesperadamente ou tem um erro grave, coletamos o relatório da falha (rastreamento de pilha e eventos internos recentes do app), modelo do dispositivo, sistema operacional, versão do app, memória e espaço disponíveis e um identificador de instalação. Se você estiver conectado, o relatório inclui seu ID de usuário para podermos responder sobre um problema que você relatar.</p>
+
+            <h3>2.4 Projetos Multitrack, Arquivos de Áudio e Gravações</h3>
             <ul>
-                <li>Os multitracks (projetos), as faixas e os arquivos de áudio importados são armazenados localmente no seu dispositivo</li>
-                <li>Formatos de áudio compatíveis: MP3, WAV, AIFF, M4A, AAC, ALAC, CAF e outros formatos aceitos pelo iOS</li>
-                <li><strong>Cada usuário tem seus próprios dados multipista, separados e protegidos</strong> — cada usuário só pode ver e acessar seus próprios multitracks e arquivos</li>
-                <li>Não enviamos nem compartilhamos seus arquivos de áudio e não temos acesso a eles</li>
-                <li>Os dados de configuração das faixas (volume, panorâmica, mudo e ordem) são armazenados no banco de dados local do aplicativo</li>
+                <li>Os multitracks (projetos), faixas e arquivos de áudio que você importa ficam armazenados localmente no seu dispositivo</li>
+                <li>Formatos de áudio compatíveis: MP3, WAV, AIFF, M4A, AAC, FLAC e os demais formatos que seu dispositivo suporta</li>
+                <li>O aplicativo usa o microfone apenas quando você inicia uma gravação. As gravações ficam no seu dispositivo e nunca são enviadas</li>
+                <li><strong>Cada usuário tem seus próprios dados de multitracks, separados e seguros</strong>: cada usuário só pode ver e acessar seus próprios multitracks e arquivos</li>
+                <li>Não enviamos, compartilhamos nem temos acesso aos seus arquivos de áudio ou gravações</li>
+                <li>A configuração das faixas (volume, pan, mudo, ordem) fica no banco de dados local do aplicativo</li>
             </ul>
 
-            <h3>2.4 Dados armazenados localmente</h3>
+            <h3>2.5 Dados Armazenados Localmente</h3>
             <ul>
-                <li>Configurações das faixas (volume, panorâmica, mudo e ordem)</li>
-                <li>Nomes de multitracks e projetos</li>
+                <li>Configuração das faixas (volume, pan, mudo, ordem)</li>
+                <li>Nomes de multitracks, playlists e projetos</li>
                 <li>Informações da sessão do usuário</li>
-                <li>Preferências do usuário (panorâmica automática, atraso da reprodução automática, zoom da forma de onda, volume inicial e cor automática)</li>
-                <li>Preferência de aparência do app (modo escuro, claro ou do sistema)</li>
-                <li>ID de usuário exclusivo (vinculado ao provedor de autenticação)</li>
+                <li>Preferências do usuário (pan automático, atraso de reprodução automática, zoom da forma de onda, volume inicial, cor automática)</li>
+                <li>Preferência de aparência (modo escuro, claro ou do sistema)</li>
+                <li>ID de usuário único (vinculado ao provedor de autenticação)</li>
             </ul>
+        </div>
 
-            <h3>2.5 Dados de publicidade (Google AdMob)</h3>
-            <p>O aplicativo exibe anúncios por meio do <strong>Google AdMob</strong>. Dependendo da sua escolha na solicitação de consentimento do App Tracking Transparency (ATT):</p>
+        <div class="section">
+            <h3>2.6 Dados de Publicidade (Google AdMob)</h3>
+            <p>A versão gratuita do aplicativo exibe anúncios por meio do <strong>Google AdMob</strong>.</p>
             <ul>
-                <li><strong>Se você permitir o rastreamento:</strong> o AdMob poderá coletar seu Identificador de Publicidade (IDFA) para exibir anúncios personalizados com base na sua atividade em outros apps e sites.</li>
-                <li><strong>Se você não permitir o rastreamento:</strong> o AdMob exibirá anúncios não personalizados sem usar o IDFA nem rastrear sua atividade entre apps.</li>
+                <li><strong>No iOS:</strong> conforme sua escolha na caixa de Transparência de Rastreamento de Apps (ATT), o AdMob pode usar seu Identificador de Publicidade (IDFA) para exibir anúncios personalizados. Se você negar o rastreamento, o AdMob exibe anúncios não personalizados, sem usar o IDFA nem rastrear sua atividade entre apps.</li>
+                <li><strong>No Android:</strong> o AdMob usa o ID de publicidade do Android para exibir e medir anúncios. Você pode redefini-lo ou excluí-lo, ou desativar os anúncios personalizados, nas configurações do dispositivo (Configurações › Privacidade › Anúncios, ou Configurações › Google › Anúncios).</li>
+                <li>O AdMob também recebe informações do dispositivo (modelo, sistema operacional, idioma), endereço IP e dados de interação com os anúncios (impressões e toques).</li>
             </ul>
-            <p>Para usuários do Espaço Econômico Europeu (EEE), o consentimento para publicidade é gerenciado pelo <strong>SDK Google UMP (User Messaging Platform)</strong>, que apresenta formulários de consentimento em conformidade com o RGPD.</p>
+            <p>Para usuários do Espaço Econômico Europeu, do Reino Unido e da Suíça, o consentimento de publicidade é gerenciado pelo <strong>SDK UMP (User Messaging Platform) do Google</strong>, que apresenta formulários de consentimento em conformidade com o GDPR. Você pode mudar sua escolha a qualquer momento nas configurações do aplicativo.</p>
+        </div>
 
-            <h3>2.6 Navegador integrado no app</h3>
-            <p>O recurso de busca de cifras inclui um navegador integrado (WKWebView), que pode carregar qualquer site externo. Sobre esse navegador:</p>
+        <div class="section">
+            <h3>2.7 Assinaturas (PRO)</h3>
+            <p>As assinaturas PRO são vendidas e cobradas pela Apple (App Store) ou pelo Google (Google Play). <strong>Nunca recebemos nem armazenamos os dados do seu cartão ou de pagamento.</strong> Para saber quais recursos você desbloqueou, usamos o <strong>Adapty</strong>, que recebe seus registros de compra (produto, datas, preço, moeda, status do teste e da renovação), um ID anônimo de perfil do Adapty, seu ID de usuário se você estiver conectado, e informações do dispositivo (modelo, sistema operacional, idioma, país derivado do seu endereço IP).</p>
+        </div>
+
+        <div class="section">
+            <h3>2.8 Fale com o Desenvolvedor</h3>
+            <p>Se você estiver conectado, pode escrever para o desenvolvedor pelo aplicativo. Armazenamos as conversas que você inicia (título, categoria, suas mensagens e as imagens que decidir anexar) no nosso banco de dados do Firebase, vinculadas ao seu ID de usuário, e as usamos apenas para responder e melhorar o aplicativo. As imagens são escolhidas por você no seletor de fotos do sistema; o aplicativo não acessa sua galeria de nenhuma outra forma.</p>
+            <p>Para avisar quando o desenvolvedor responder, o aplicativo usa o <strong>Firebase Cloud Messaging</strong>, que atribui ao seu dispositivo um token de notificações. Você pode desativar as notificações nas configurações do dispositivo.</p>
+        </div>
+
+        <div class="section">
+            <h3>2.9 Navegador Integrado</h3>
+            <p>O recurso de busca de cifras inclui um navegador integrado que pode carregar qualquer site externo. Sobre esse navegador:</p>
             <ul>
-                <li>O aplicativo <strong>não</strong> registra nem transmite os URLs que você visita</li>
-                <li>Os sites externos que você visita têm suas próprias políticas de privacidade e podem usar cookies, rastreadores ou outras tecnologias de coleta de dados, independentemente deste aplicativo</li>
-                <li>Quando você escolhe importar conteúdo de cifras, o aplicativo envia uma solicitação de rede ao site que está sendo visualizado para extrair esse conteúdo — essas solicitações não incluem dados pessoais nem credenciais</li>
-                <li>Você é responsável por consultar as políticas de privacidade dos sites externos que escolher visitar</li>
+                <li>O aplicativo <strong>não</strong> registra, armazena nem transmite os endereços que você visita</li>
+                <li>Os sites externos que você visita têm suas próprias políticas de privacidade e podem usar cookies, rastreadores ou outras tecnologias de coleta de dados independentes deste aplicativo</li>
+                <li>Quando você decide importar cifras, o aplicativo envia uma solicitação ao site que você está vendo para extrair esse conteúdo; essas solicitações não incluem dados pessoais nem credenciais</li>
+                <li>Você é responsável por revisar as políticas de privacidade dos sites externos que decidir visitar</li>
             </ul>
+        </div>
 
-            <h3>2.7 Vídeos tutoriais</h3>
-            <p>O aplicativo inclui uma seção de tutoriais com vídeos incorporados por meio de um player do YouTube (WKWebView). O YouTube é operado pela Google LLC e pode coletar dados de acordo com a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade do Google</a>.</p>
-        </section>
+        <div class="section">
+            <h3>2.10 Vídeos Tutoriais</h3>
+            <p>O aplicativo inclui uma seção de tutoriais que exibe vídeos em um player do YouTube. O YouTube é operado pela Google LLC e pode coletar dados de acordo com a <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidade do Google</a>.</p>
+        </div>
 
-        <section class="section">
-            <h2>3. Como usamos suas informações</h2>
+        <div class="section">
+            <h2>3. Como Usamos suas Informações</h2>
             <p>Usamos as informações coletadas para:</p>
             <ul>
-                <li><strong>Autenticação:</strong> verificar sua identidade e gerenciar sua sessão</li>
-                <li><strong>Funcionalidade:</strong> oferecer os recursos do aplicativo (reprodução de áudio, gerenciamento de faixas e transposição de tom)</li>
-                <li><strong>Publicidade:</strong> exibir anúncios relevantes pelo Google AdMob. Se você permitir o rastreamento (ATT), os anúncios poderão ser personalizados. Se não permitir, serão exibidos anúncios não personalizados.</li>
-                <li><strong>Exportação:</strong> processar seu projeto multipista localmente no dispositivo para gerar um arquivo de áudio no formato escolhido</li>
-                <li><strong>Melhoria do serviço:</strong> analisar o uso do aplicativo para melhorar a experiência do usuário</li>
-                <li><strong>Solução de problemas:</strong> identificar e resolver problemas técnicos</li>
-                <li><strong>Comunicação:</strong> enviar notificações importantes sobre o aplicativo, se aplicável</li>
+                <li><strong>Autenticação:</strong> Verificar sua identidade e gerenciar sua sessão</li>
+                <li><strong>Funcionalidade:</strong> Oferecer os recursos do aplicativo (reprodução de áudio, gerenciamento de faixas, transposição, gravação)</li>
+                <li><strong>Assinaturas:</strong> Saber quais recursos PRO você desbloqueou e restaurar suas compras</li>
+                <li><strong>Publicidade:</strong> Exibir anúncios do Google AdMob na versão gratuita, personalizados apenas onde você permitir</li>
+                <li><strong>Exportação:</strong> Processar seu projeto multitrack localmente no dispositivo para gerar um arquivo de áudio no formato que você escolher</li>
+                <li><strong>Suporte:</strong> Responder às mensagens que você envia em Fale com o Desenvolvedor</li>
+                <li><strong>Melhoria do serviço:</strong> Analisar o uso do aplicativo para melhorar a experiência</li>
+                <li><strong>Solução de problemas:</strong> Identificar e resolver falhas e problemas técnicos</li>
+                <li><strong>Comunicação:</strong> Avisar sobre respostas e informações importantes do aplicativo</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="section">
-            <h2>4. Compartilhamento de informações com terceiros</h2>
-            <h3>4.1 Serviços de terceiros</h3>
-            <p>Usamos os seguintes serviços de terceiros:</p>
+        <div class="section">
+            <h2>4. Compartilhamento de Informações com Terceiros</h2>
+            <h3>4.1 Serviços de Terceiros</h3>
+            <p>Usamos os seguintes serviços de terceiros, que processam dados em nosso nome:</p>
+
             <div class="highlight">
-                <p><strong>Google Sign-In:</strong></p>
+                <p><strong>Login com o Google:</strong></p>
                 <ul>
                     <li>Provedor: Google LLC</li>
-                    <li>Finalidade: autenticação de usuários</li>
-                    <li>Política de Privacidade: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+                    <li>Finalidade: Autenticação de usuários</li>
+                    <li>Política de Privacidade: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
                 </ul>
             </div>
+
             <div class="highlight">
                 <p><strong>Iniciar sessão com a Apple:</strong></p>
                 <ul>
                     <li>Provedor: Apple Inc.</li>
-                    <li>Finalidade: autenticação de usuários</li>
-                    <li>Política de Privacidade: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">https://www.apple.com/legal/privacy/</a></li>
+                    <li>Finalidade: Autenticação de usuários</li>
+                    <li>Política de Privacidade: <a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></li>
                 </ul>
             </div>
+
             <div class="highlight">
-                <p><strong>Firebase Analytics:</strong></p>
+                <p><strong>Firebase (Authentication, Cloud Firestore, Analytics, Crashlytics, Remote Config, Cloud Messaging):</strong></p>
                 <ul>
                     <li>Provedor: Google LLC / Firebase</li>
-                    <li>Finalidade: análise de uso e desempenho</li>
-                    <li>Política de Privacidade: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
+                    <li>Finalidade: Login, armazenar seu perfil e suas conversas com o desenvolvedor, análise de uso e de falhas, configuração de recursos e avisos de respostas</li>
+                    <li>Política de Privacidade: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
                 </ul>
             </div>
+
             <div class="highlight">
-                <p><strong>Firebase Remote Config:</strong></p>
-                <ul>
-                    <li>Provedor: Google LLC / Firebase</li>
-                    <li>Finalidade: configuração de sinalizadores de recursos (controla quais recursos estão ativos sem exigir uma atualização do app)</li>
-                    <li>Política de Privacidade: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
-                </ul>
-            </div>
-            <div class="highlight">
-                <p><strong>Google AdMob:</strong></p>
+                <p><strong>Google AdMob e SDK UMP do Google:</strong></p>
                 <ul>
                     <li>Provedor: Google LLC</li>
-                    <li>Finalidade: publicidade — exibição de anúncios em banner e intersticiais no aplicativo</li>
-                    <li>Dados coletados: Identificador de Publicidade (IDFA) se o usuário aceitar o ATT; informações do dispositivo para segmentação de anúncios</li>
-                    <li>Política de Privacidade: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
-                    <li><strong>Observação:</strong> se você não permitir o rastreamento na solicitação do ATT, o AdMob exibirá apenas anúncios não personalizados, sem usar o IDFA</li>
+                    <li>Finalidade: Exibir anúncios na versão gratuita e gerenciar o consentimento de publicidade</li>
+                    <li>Dados coletados: Identificador de Publicidade (IDFA no iOS se você aceitar o ATT; ID de publicidade do Android no Android), informações do dispositivo, endereço IP, interações com anúncios</li>
+                    <li>Política de Privacidade: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
                 </ul>
             </div>
+
             <div class="highlight">
-                <p><strong>Google UMP SDK (User Messaging Platform):</strong></p>
+                <p><strong>Adapty:</strong></p>
                 <ul>
-                    <li>Provedor: Google LLC</li>
-                    <li>Finalidade: gerenciamento do consentimento para publicidade de usuários do Espaço Econômico Europeu (RGPD)</li>
-                    <li>Política de Privacidade: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+                    <li>Provedor: Adapty Tech Inc.</li>
+                    <li>Finalidade: Status da assinatura, validação de compras e a tela de assinatura</li>
+                    <li>Política de Privacidade: <a href="https://adapty.io/privacy" target="_blank">https://adapty.io/privacy</a></li>
                 </ul>
             </div>
-            <h3>4.2 Não vendemos seus dados</h3>
-            <p>Não vendemos, alugamos nem compartilhamos suas informações pessoais com terceiros para fins de marketing.</p>
-            <h3>4.3 Requisitos legais</h3>
+
+            <div class="highlight">
+                <p><strong>App Store e Google Play:</strong></p>
+                <ul>
+                    <li>Provedor: Apple Inc. / Google LLC</li>
+                    <li>Finalidade: Processar os pagamentos das assinaturas, conforme suas próprias políticas de privacidade</li>
+                </ul>
+            </div>
+
+            <h3>4.2 Não Vendemos seus Dados</h3>
+            <p>Não vendemos, alugamos nem compartilhamos suas informações pessoais com terceiros para fins de marketing próprios deles.</p>
+
+            <h3>4.3 Requisitos Legais</h3>
             <p>Podemos divulgar suas informações se exigido por lei ou em resposta a solicitações válidas de autoridades públicas.</p>
-        </section>
+        </div>
 
-        <section class="section">
-            <h2>5. Armazenamento e segurança dos dados</h2>
-            <h3>5.1 Armazenamento local</h3>
+        <div class="section">
+            <h2>5. Armazenamento e Segurança dos Dados</h2>
+            <h3>5.1 Armazenamento Local</h3>
             <ul>
-                <li>Os dados do aplicativo são armazenados localmente no seu dispositivo usando CoreData e UserDefaults</li>
-                <li>Os arquivos de áudio permanecem no dispositivo e não são sincronizados com servidores externos</li>
-                <li>Os arquivos de áudio exportados são gerados inteiramente no dispositivo e só são compartilhados externamente quando você escolhe explicitamente fazê-lo pela folha de compartilhamento do iOS</li>
+                <li>Os dados do aplicativo ficam armazenados localmente no seu dispositivo, no armazenamento privado do aplicativo</li>
+                <li>Os arquivos de áudio e as gravações permanecem no seu dispositivo e não são sincronizados com servidores externos</li>
+                <li>Os arquivos exportados são gerados inteiramente no seu dispositivo e só são compartilhados quando você decide, pelo menu de compartilhamento do sistema</li>
             </ul>
-            <h3>5.2 Segurança</h3>
-            <p>Adotamos medidas de segurança razoáveis para proteger suas informações:</p>
-            <ul>
-                <li>Uso de protocolos seguros (HTTPS) para comunicações</li>
-                <li>Armazenamento seguro dos dados da sessão</li>
-                <li>Autenticação por serviços confiáveis (Google Sign-In e Iniciar sessão com a Apple)</li>
-            </ul>
-            <p>No entanto, nenhum método de transmissão pela internet ou de armazenamento eletrônico é 100% seguro.</p>
-        </section>
 
-        <section class="section">
-            <h2>6. Retenção de dados</h2>
-            <ul>
-                <li><strong>Dados da sessão:</strong> mantidos enquanto sua sessão estiver ativa ou até você sair da conta</li>
-                <li><strong>Dados locais:</strong> mantidos no dispositivo até você desinstalar o aplicativo ou excluir os dados manualmente</li>
-                <li><strong>Dados de análise:</strong> gerenciados pelo Firebase de acordo com as políticas de retenção do serviço</li>
-            </ul>
-        </section>
+            <h3>5.2 Dados Armazenados em Nossos Servidores</h3>
+            <p>Apenas seu perfil de usuário e suas conversas com o desenvolvedor ficam em nossos servidores (Google Firebase).</p>
 
-        <section class="section">
-            <h2>7. Seus direitos</h2>
+            <h3>5.3 Segurança</h3>
+            <p>Aplicamos medidas de segurança razoáveis para proteger suas informações:</p>
+            <ul>
+                <li>Todos os dados que trafegam pela rede são criptografados em trânsito (HTTPS/TLS)</li>
+                <li>Cada usuário só pode ler seu próprio perfil e suas próprias conversas</li>
+                <li>Autenticação por serviços confiáveis (Google e Apple)</li>
+            </ul>
+            <p>No entanto, nenhum método de transmissão pela Internet ou de armazenamento eletrônico é 100% seguro.</p>
+        </div>
+
+        <div class="section">
+            <h2>6. Retenção dos Dados</h2>
+            <ul>
+                <li><strong>Dados de sessão:</strong> Mantidos enquanto sua sessão estiver ativa ou até você sair</li>
+                <li><strong>Dados locais:</strong> Mantidos no seu dispositivo até você desinstalar o aplicativo, excluir sua conta ou apagar os dados manualmente</li>
+                <li><strong>Perfil de usuário:</strong> Mantido até você excluir sua conta</li>
+                <li><strong>Conversas com o desenvolvedor:</strong> Mantidas até você pedir a exclusão ou excluir sua conta como descrito na Seção 7.2</li>
+                <li><strong>Relatórios de falhas:</strong> Mantidos pelo Firebase Crashlytics por 90 dias</li>
+                <li><strong>Dados de análise:</strong> Gerenciados pelo Firebase conforme suas políticas de retenção</li>
+                <li><strong>Registros de compra:</strong> Mantidos pelo Adapty, pela Apple e pelo Google pelo tempo necessário para faturamento, contabilidade e obrigações legais</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Seus Direitos</h2>
             <p>Você tem o direito de:</p>
             <ul>
-                <li><strong>Acessar:</strong> solicitar uma cópia dos dados pessoais que temos sobre você</li>
-                <li><strong>Retificar:</strong> corrigir dados imprecisos ou incompletos</li>
-                <li><strong>Excluir:</strong> solicitar a exclusão dos seus dados pessoais</li>
-                <li><strong>Revogar o consentimento:</strong> sair da conta e parar de usar o aplicativo a qualquer momento</li>
+                <li><strong>Acessar:</strong> Solicitar uma cópia dos dados pessoais que temos sobre você</li>
+                <li><strong>Retificar:</strong> Corrigir dados incorretos ou incompletos</li>
+                <li><strong>Excluir:</strong> Solicitar a exclusão dos seus dados pessoais</li>
+                <li><strong>Revogar o consentimento:</strong> Mudar seu consentimento de publicidade, sair e parar de usar o aplicativo a qualquer momento</li>
             </ul>
             <p>Para exercer esses direitos, você pode:</p>
             <ul>
-                <li>Sair da conta no aplicativo</li>
-                <li>Excluir sua conta pela tela Conta do app (consulte a seção 7.1)</li>
-                <li>Desinstalar o aplicativo para excluir todos os dados locais</li>
-                <li>Entrar em contato pelo endereço indicado na seção 11</li>
+                <li>Sair do aplicativo</li>
+                <li>Excluir sua conta na tela Conta do app (veja a Seção 7.1)</li>
+                <li>Solicitar a exclusão sem o app (veja a Seção 7.2)</li>
+                <li>Desinstalar o aplicativo para apagar todos os dados locais</li>
+                <li>Entrar em contato pelo endereço da Seção 11</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="section">
-            <h3>7.1 Exclusão da conta</h3>
+        <div class="section">
+            <h3 id="account-deletion">7.1 Excluir a Conta pelo App</h3>
             <p>Você pode excluir sua conta diretamente no aplicativo:</p>
             <ul>
-                <li><strong>Como:</strong> acesse Ajustes da conta → Excluir conta</li>
-                <li><strong>O que acontece:</strong> sua conta será excluída permanentemente e imediatamente</li>
-                <li><strong>Dados excluídos:</strong>
+                <li><strong>Como:</strong> Vá em Conta → Excluir conta e confirme (pode ser preciso entrar novamente)</li>
+                <li><strong>O que é excluído imediatamente:</strong>
                     <ul>
-                        <li>Suas credenciais de autenticação</li>
-                        <li>Todos os multitracks, faixas e arquivos de áudio associados à sua conta</li>
-                        <li>Todos os dados pessoais armazenados no aplicativo</li>
-                        <li>Informações da sessão</li>
+                        <li>Sua conta e suas credenciais de autenticação</li>
+                        <li>Seu perfil de usuário em nossos servidores</li>
+                        <li>Todos os multitracks, faixas, gravações e arquivos de áudio associados à sua conta no dispositivo</li>
+                        <li>Suas preferências e as informações da sessão</li>
                     </ul>
                 </li>
-                <li><strong>Prazo:</strong> exclusão imediata do aplicativo e do armazenamento local</li>
-                <li><strong>Confirmação:</strong> você receberá uma mensagem de confirmação quando a exclusão for concluída</li>
+                <li><strong>Confirmação:</strong> Você verá uma mensagem de confirmação quando a exclusão terminar</li>
             </ul>
-            <p><strong>Observação:</strong> essa ação não pode ser desfeita. Todos os seus dados serão removidos permanentemente.</p>
-        </section>
+            <p><strong>Observação:</strong> Esta ação não pode ser desfeita. Excluir a conta não cancela uma assinatura: cancele-a nas configurações de assinaturas da App Store ou do Google Play.</p>
 
-        <section class="section">
-            <h2>8. Privacidade de crianças</h2>
-            <p>The Multitrack Player não é destinado a crianças menores de 13 anos. Não coletamos intencionalmente informações pessoais de crianças menores de 13 anos. Se descobrirmos que coletamos informações de um menor, vamos excluí-las imediatamente.</p>
-        </section>
+            <h3>7.2 Excluir sem o App</h3>
+            <p>Se você não tem mais o aplicativo, ou também quer que apaguemos suas conversas com o desenvolvedor, siga os passos da nossa <a href="delete-account-pt-br.html">página de exclusão de conta</a>. Excluímos sua conta, seu perfil e suas conversas em até 30 dias e confirmamos por e-mail. Os dados de análise e de falhas deixam de estar vinculados à sua conta após a exclusão e expiram conforme os prazos da Seção 6; os registros de compra são mantidos apenas pelo tempo exigido por lei.</p>
+        </div>
 
-        <section class="section">
-            <h2>9. Transferências internacionais</h2>
-            <p>Seus dados podem ser transferidos e armazenados em servidores localizados fora do seu país de residência, onde as leis de proteção de dados podem ser diferentes. Ao usar o aplicativo, você consente com essas transferências.</p>
-        </section>
+        <div class="section">
+            <h2>8. Privacidade de Menores</h2>
+            <p>The Multitrack Player é destinado a usuários com 13 anos ou mais e não é direcionado a menores de 13 anos. Não coletamos intencionalmente informações pessoais de menores de 13 anos. Se descobrirmos que coletamos informações de um menor de 13 anos, vamos excluí-las imediatamente.</p>
+        </div>
 
-        <section class="section">
-            <h2>10. Alterações nesta política</h2>
-            <p>Podemos atualizar esta Política de Privacidade periodicamente. Avisaremos sobre alterações importantes por meio de:</p>
-            <ul><li>Atualização da data "Última atualização" no início desta política</li></ul>
-            <p>Recomendamos que você consulte esta política periodicamente.</p>
-        </section>
+        <div class="section">
+            <h2>9. Transferências Internacionais</h2>
+            <p>Seus dados podem ser transferidos e armazenados em servidores localizados fora do seu país de residência, onde as leis de proteção de dados podem ser diferentes. Ao usar o aplicativo, você concorda com essas transferências.</p>
+        </div>
 
-        <section class="section">
+        <div class="section">
+            <h2>10. Alterações nesta Política</h2>
+            <p>Podemos atualizar esta Política de Privacidade periodicamente. Informaremos mudanças importantes por meio de:</p>
+            <ul>
+                <li>Atualização da data "Última atualização" no início desta política</li>
+            </ul>
+            <p>Recomendamos revisar esta política periodicamente.</p>
+        </div>
+
+        <div class="section">
             <h2>11. Contato</h2>
-            <p>Se tiver dúvidas, comentários ou solicitações sobre esta Política de Privacidade, entre em contato:</p>
+            <p>Se você tiver perguntas, comentários ou solicitações sobre esta Política de Privacidade, entre em contato:</p>
             <ul>
                 <li><strong>E-mail:</strong> <a href="mailto:multitrack-player-app@outlook.com">multitrack-player-app@outlook.com</a></li>
                 <li><strong>Desenvolvedor:</strong> Esteban Triviño</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="section">
-            <h2>12. Detalhes técnicos para o App Store Connect</h2>
-            <h3>Dados coletados (de acordo com as categorias da Apple):</h3>
-            <p><strong>Informações de contato:</strong></p>
-            <ul><li>Endereço de e-mail (vinculado à identidade do usuário)</li></ul>
-            <p><strong>Identificadores:</strong></p>
-            <ul><li>ID de usuário (vinculado à identidade do usuário)</li></ul>
-            <p><strong>Dados de uso:</strong></p>
-            <ul>
-                <li>Interações com o produto — nomes de multitracks, faixas e listas de reprodução, ações de reprodução e ajustes de tom e volume (vinculados à identidade do usuário)</li>
-                <li>Atividade de exportação — formato e duração (vinculados à identidade do usuário)</li>
-                <li>Dados de diagnóstico (vinculados à identidade do usuário)</li>
-            </ul>
-            <p><strong>Localização:</strong></p>
-            <ul><li>Localização aproximada (país e cidade) — derivada automaticamente pelo Firebase a partir do idioma/região do dispositivo e do endereço IP (vinculada à identidade do usuário)</li></ul>
-            <p><strong>Dados usados para rastrear você:</strong> Sim — Identificador de Publicidade (IDFA/ID do dispositivo) quando o usuário aceita a solicitação do App Tracking Transparency (ATT). Se não aceitar, o IDFA não será usado e não haverá rastreamento entre apps.</p>
-            <p><strong>Dados vinculados a você:</strong></p>
-            <ul>
-                <li>Endereço de e-mail</li>
-                <li>ID de usuário</li>
-                <li>Nome</li>
-                <li>Dados de uso</li>
-                <li>Diagnósticos</li>
-            </ul>
-            <p><strong>Dados de rastreamento (quando o usuário aceita o ATT):</strong></p>
-            <ul><li>Identificador do dispositivo (IDFA) — usado pelo Google AdMob para publicidade personalizada</li></ul>
-        </section>
+        <div class="section">
+            <h2>12. Resumo por Loja</h2>
+            <h3>12.1 App Store (categorias da Apple)</h3>
+            <p><strong>Dados vinculados a você:</strong> e-mail, nome, ID de usuário, interações com o produto (nomes de multitracks/faixas/playlists, ações de reprodução, ajustes de transposição e volume, atividade de exportação), histórico de compras, mensagens de suporte e as fotos que você anexar, dados de falhas e diagnóstico, localização aproximada (país e cidade).</p>
+            <p><strong>Dados usados para rastrear você:</strong> Identificador de Publicidade (IDFA), apenas se você aceitar a caixa de Transparência de Rastreamento de Apps (ATT). Se negar, o IDFA não é usado e não há rastreamento entre apps.</p>
 
-        <section class="section">
-            <h2>13. Declarações adicionais</h2>
+            <h3>12.2 Google Play (Segurança dos dados)</h3>
             <ul>
-                <li><strong>Não coletamos informações financeiras:</strong> o aplicativo não processa pagamentos nem armazena informações de cartão de crédito</li>
-                <li><strong>Não acessamos contatos:</strong> não solicitamos acesso à lista de contatos do dispositivo</li>
-                <li><strong>Não acessamos a localização:</strong> não coletamos dados de localização geográfica</li>
-                <li><strong>Não acessamos a câmera/fotos:</strong> acessamos arquivos de áudio somente pelo seletor de documentos do sistema</li>
-                <li><strong>Rastreamento opcional para anúncios:</strong> o aplicativo solicita permissão de rastreamento (ATT) para exibir anúncios personalizados pelo Google AdMob. Se você não permitir, continuará vendo anúncios, mas eles não serão personalizados e o IDFA não será usado. Você pode alterar essa preferência a qualquer momento em Ajustes → Privacidade → Rastreamento.</li>
-                <li><strong>Navegador integrado:</strong> o navegador de cifras pode carregar qualquer site externo; esses sites podem usar tecnologias próprias de rastreamento, que não estão sob nosso controle</li>
+                <li><strong>Informações pessoais:</strong> nome, e-mail, IDs de usuário — para gerenciamento da conta e funcionamento do app</li>
+                <li><strong>Informações financeiras:</strong> histórico de compras — para o funcionamento do app (assinaturas); sem dados de pagamento</li>
+                <li><strong>Localização:</strong> localização aproximada derivada do endereço IP — para análise e publicidade</li>
+                <li><strong>Mensagens e fotos:</strong> as mensagens e imagens que você envia em Fale com o Desenvolvedor — para atendimento ao cliente</li>
+                <li><strong>Atividade no app:</strong> interações e ações no app — para análise</li>
+                <li><strong>Informações e desempenho do app:</strong> registros de falhas e diagnósticos — para análise e correção de erros</li>
+                <li><strong>Dispositivo ou outros IDs:</strong> ID de publicidade do Android, IDs de instância e de instalação do app, token de notificações — para publicidade, análise e notificações</li>
+                <li>Os arquivos de áudio e as gravações são processados apenas no seu dispositivo e não são coletados</li>
+                <li>Todos os dados são criptografados em trânsito e você pode solicitar a exclusão deles (Seção 7)</li>
             </ul>
-        </section>
+        </div>
 
-        <div class="footer">
-            <p>© 2026 The Multitrack Player. Todos os direitos reservados.</p>
+        <div class="section">
+            <h2>13. Declarações Adicionais</h2>
+            <ul>
+                <li><strong>Não coletamos dados de pagamento:</strong> As assinaturas são cobradas pela Apple ou pelo Google; nunca vemos dados de cartão ou bancários</li>
+                <li><strong>Não acessamos contatos:</strong> Não pedimos acesso à lista de contatos do dispositivo</li>
+                <li><strong>Não acessamos a localização precisa:</strong> Não pedimos permissão de localização; apenas uma localização aproximada é derivada do seu endereço IP</li>
+                <li><strong>Microfone:</strong> Usado apenas enquanto você grava, e as gravações ficam no seu dispositivo</li>
+                <li><strong>Fotos:</strong> Apenas as imagens que você decidir anexar a uma mensagem ao desenvolvedor, pelo seletor do sistema</li>
+                <li><strong>Personalização de anúncios opcional:</strong> No iOS pela caixa ATT, no Android pelas configurações de anúncios do dispositivo, e no EEE, no Reino Unido e na Suíça pelo formulário de consentimento. Você continuará vendo anúncios na versão gratuita, mas eles não serão personalizados</li>
+                <li><strong>Navegador integrado:</strong> A busca de cifras pode carregar qualquer site externo; esses sites podem ter suas próprias tecnologias de rastreamento, fora do nosso controle</li>
+            </ul>
         </div>
     </main>
 </body>
