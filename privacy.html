@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for The Multitrack Player iOS App">
+    <meta name="description" content="Privacy Policy for The Multitrack Player app for iOS and Android">
     <title>Privacy Policy - The Multitrack Player</title>
     <meta name="theme-color" content="#080b16">
     <link rel="stylesheet" href="assets/css/site.css">
@@ -32,25 +32,26 @@
     <div class="container">
         <main id="main">
         <h1>Privacy Policy - The Multitrack Player</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> May 3, 2026</p>
+        <p class="last-updated"><strong>Last Updated:</strong> November 20, 2026</p>
 
         <div class="section">
             <h2>1. Introduction</h2>
-            <p>This Privacy Policy describes how The Multitrack Player ("we", "our" or "the application") collects, uses, and protects the information of users ("you" or "user") of our iOS mobile application.</p>
+            <p>This Privacy Policy describes how The Multitrack Player ("we", "our" or "the application") collects, uses, and protects the information of users ("you" or "user") of our mobile application for <strong>iOS (iPhone and iPad)</strong> and <strong>Android</strong>, including its CarPlay and Android Auto experiences. Unless a section says otherwise, it applies equally to both platforms.</p>
             <p>By using The Multitrack Player, you agree to the practices described in this policy. If you do not agree with these terms, please do not use the application.</p>
         </div>
 
         <div class="section">
             <h2>2. Information We Collect</h2>
-            
+
             <h3>2.1 Account Information</h3>
-            <p>When you sign in with Google Sign-In or Sign in with Apple, we collect:</p>
+            <p>Signing in is optional: you can use the application in guest mode without an account. When you sign in with Google Sign-In or Sign in with Apple, we collect:</p>
             <ul>
                 <li>Email address</li>
                 <li>User name</li>
                 <li>Unique user ID provided by the authentication provider (Google or Apple)</li>
                 <li>Profile photo (if available)</li>
             </ul>
+            <p>Your name, email address, user ID and sign-in provider are kept in a user profile in our Firebase database (Cloud Firestore).</p>
             <p><strong>Note:</strong> When using Sign in with Apple, you have the option to hide your email address. In that case, Apple provides a private relay email address.</p>
 
             <h3>2.2 Usage and Analytics Data</h3>
@@ -61,24 +62,29 @@
                 <li>Playback settings: pitch transposition values, track volume levels, loop state</li>
                 <li>Export activity: file format and duration of exported audio</li>
                 <li>Audio routing changes (output bus index)</li>
+                <li>Subscription and paywall events (which screen was shown, purchases started or completed)</li>
                 <li>Screen views and general navigation patterns</li>
-                <li>Device information (model, operating system, app version)</li>
+                <li>Device information (model, operating system, app version) and an app instance identifier</li>
                 <li>Approximate location (country and city, derived automatically by Firebase from device locale and IP address)</li>
             </ul>
 
-            <h3>2.3 Multitrack Projects and Audio Files</h3>
+            <h3>2.3 Crash and Diagnostic Data</h3>
+            <p>Through Firebase Crashlytics, when the application crashes or hits a serious error we collect the crash report (stack trace and the app's recent internal events), device model, operating system, app version, available memory and disk space, and an installation identifier. When you are signed in, the report includes your user ID so we can answer you about a problem you reported.</p>
+
+            <h3>2.4 Multitrack Projects, Audio Files and Recordings</h3>
             <ul>
                 <li>Multitracks (projects), tracks, and audio files you import are stored locally on your device</li>
-                <li>Supported audio formats: MP3, WAV, AIFF, M4A, AAC, ALAC, CAF, and other formats supported by iOS</li>
+                <li>Supported audio formats: MP3, WAV, AIFF, M4A, AAC, FLAC and the other formats your device supports</li>
+                <li>The application uses the microphone only when you start a recording. Recordings are saved on your device and are never uploaded</li>
                 <li><strong>Each user has their own separate and secure multitrack data</strong> - each user can only see and access their own multitracks and files</li>
-                <li>We do not upload, share, or have access to your audio files</li>
+                <li>We do not upload, share, or have access to your audio files or recordings</li>
                 <li>Track configuration data (volume, pan, mute, order) is stored in the application's local database</li>
             </ul>
 
-            <h3>2.4 Locally Stored Data</h3>
+            <h3>2.5 Locally Stored Data</h3>
             <ul>
                 <li>Track configurations (volume, pan, mute, order)</li>
-                <li>Multitrack and project names</li>
+                <li>Multitrack, playlist and project names</li>
                 <li>User session information</li>
                 <li>User preferences (auto-pan, auto-play delay, waveform zoom, initial volume, auto-color)</li>
                 <li>App appearance preference (dark, light, or system mode)</li>
@@ -87,18 +93,30 @@
         </div>
 
         <div class="section">
-            <h3>2.5 Advertising Data (Google AdMob)</h3>
-            <p>The application displays ads through <strong>Google AdMob</strong>. Depending on your choice in the App Tracking Transparency (ATT) consent dialog:</p>
+            <h3>2.6 Advertising Data (Google AdMob)</h3>
+            <p>The free version of the application displays ads through <strong>Google AdMob</strong>.</p>
             <ul>
-                <li><strong>If you allow tracking:</strong> AdMob may collect your Advertising Identifier (IDFA) to show personalized ads based on your activity in other apps and websites.</li>
-                <li><strong>If you deny tracking:</strong> AdMob will show non-personalized ads without using the IDFA or tracking your cross-app activity.</li>
+                <li><strong>On iOS:</strong> depending on your choice in the App Tracking Transparency (ATT) dialog, AdMob may use your Advertising Identifier (IDFA) to show personalized ads. If you deny tracking, AdMob shows non-personalized ads without using the IDFA or tracking your cross-app activity.</li>
+                <li><strong>On Android:</strong> AdMob uses the Android Advertising ID to show and measure ads. You can reset or delete it, or opt out of personalized ads, in your device settings (Settings › Privacy › Ads, or Settings › Google › Ads).</li>
+                <li>AdMob also receives device information (model, operating system, language), IP address and ad interaction data (impressions and taps).</li>
             </ul>
-            <p>For users in the European Economic Area (EEA), advertising consent is managed through the <strong>Google UMP (User Messaging Platform) SDK</strong>, which presents GDPR-compliant consent forms.</p>
+            <p>For users in the European Economic Area, the United Kingdom and Switzerland, advertising consent is managed through the <strong>Google UMP (User Messaging Platform) SDK</strong>, which presents GDPR-compliant consent forms. You can change your choice at any time from the application's settings.</p>
         </div>
 
         <div class="section">
-            <h3>2.6 In-App Web Browser</h3>
-            <p>The chord browser feature includes an in-app web browser (WKWebView) that can load any external website. Regarding this browser:</p>
+            <h3>2.7 Subscriptions (PRO)</h3>
+            <p>PRO subscriptions are sold and charged by Apple (App Store) or Google (Google Play). <strong>We never receive or store your card or payment details.</strong> To know which features you have unlocked, we use <strong>Adapty</strong>, which receives your purchase records (product, dates, price, currency, trial and renewal status), an anonymous Adapty profile ID, your user ID when you are signed in, and device information (model, operating system, language, country derived from your IP address).</p>
+        </div>
+
+        <div class="section">
+            <h3>2.8 Talk to the Developer</h3>
+            <p>If you are signed in, you can write to the developer from the application. We store the conversations you start (title, category, your messages and any images you choose to attach) in our Firebase database, linked to your user ID, and use them only to answer you and improve the application. Images are picked by you through the system photo picker; the application does not access your photo library otherwise.</p>
+            <p>To let you know when the developer replies, the application uses <strong>Firebase Cloud Messaging</strong>, which assigns your device a notification token. You can turn notifications off in your device settings.</p>
+        </div>
+
+        <div class="section">
+            <h3>2.9 In-App Web Browser</h3>
+            <p>The chord browser feature includes an in-app web browser that can load any external website. Regarding this browser:</p>
             <ul>
                 <li>The application does <strong>not</strong> record, log, or transmit the URLs you visit</li>
                 <li>External websites you visit have their own privacy policies and may use cookies, trackers, or other data collection technologies independent of this application</li>
@@ -108,8 +126,8 @@
         </div>
 
         <div class="section">
-            <h3>2.7 Tutorial Videos</h3>
-            <p>The application includes a tutorial section that embeds videos via a YouTube player (WKWebView). YouTube is operated by Google LLC and may collect data in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+            <h3>2.10 Tutorial Videos</h3>
+            <p>The application includes a tutorial section that embeds videos via a YouTube player. YouTube is operated by Google LLC and may collect data in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
         </div>
 
         <div class="section">
@@ -117,21 +135,22 @@
             <p>We use the collected information to:</p>
             <ul>
                 <li><strong>Authentication:</strong> Verify your identity and manage your session</li>
-                <li><strong>Functionality:</strong> Provide application features (audio playback, track management, pitch transposition)</li>
-                <li><strong>Advertising:</strong> Display relevant ads through Google AdMob. If you allow tracking (ATT), ads may be personalized. If you deny, non-personalized ads will be shown instead.</li>
+                <li><strong>Functionality:</strong> Provide application features (audio playback, track management, pitch transposition, recording)</li>
+                <li><strong>Subscriptions:</strong> Know which PRO features you have unlocked and restore your purchases</li>
+                <li><strong>Advertising:</strong> Display ads through Google AdMob in the free version, personalized only where you allow it</li>
                 <li><strong>Export:</strong> Process your multitrack project locally on your device to generate an audio file in the format you choose</li>
+                <li><strong>Support:</strong> Answer the messages you send through Talk to the Developer</li>
                 <li><strong>Service Improvement:</strong> Analyze application usage to improve user experience</li>
-                <li><strong>Troubleshooting:</strong> Identify and resolve technical issues</li>
-                <li><strong>Communication:</strong> Send important notifications about the application (if applicable)</li>
+                <li><strong>Troubleshooting:</strong> Identify and resolve crashes and technical issues</li>
+                <li><strong>Communication:</strong> Notify you of replies and important information about the application</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>4. Sharing Information with Third Parties</h2>
-            
             <h3>4.1 Third-Party Services</h3>
-            <p>We use the following third-party services:</p>
-            
+            <p>We use the following third-party services, which process data on our behalf:</p>
+
             <div class="highlight">
                 <p><strong>Google Sign-In:</strong></p>
                 <ul>
@@ -151,45 +170,43 @@
             </div>
 
             <div class="highlight">
-                <p><strong>Firebase Analytics:</strong></p>
+                <p><strong>Firebase (Authentication, Cloud Firestore, Analytics, Crashlytics, Remote Config, Cloud Messaging):</strong></p>
                 <ul>
                     <li>Provider: Google LLC / Firebase</li>
-                    <li>Purpose: Usage and performance analysis</li>
+                    <li>Purpose: Sign-in, storing your profile and your conversations with the developer, usage and crash analysis, feature configuration, and reply notifications</li>
                     <li>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
                 </ul>
             </div>
 
             <div class="highlight">
-                <p><strong>Firebase Remote Config:</strong></p>
+                <p><strong>Google AdMob and Google UMP SDK:</strong></p>
                 <ul>
-                    <li>Provider: Google LLC / Firebase</li>
-                    <li>Purpose: Feature flag configuration (controls which features are active without requiring an app update)</li>
-                    <li>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+                    <li>Provider: Google LLC</li>
+                    <li>Purpose: Displaying ads in the free version, and advertising consent management</li>
+                    <li>Data collected: Advertising Identifier (IDFA on iOS when you accept ATT; Android Advertising ID on Android), device information, IP address, ad interactions</li>
+                    <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
                 </ul>
             </div>
 
             <div class="highlight">
-                <p><strong>Google AdMob:</strong></p>
+                <p><strong>Adapty:</strong></p>
                 <ul>
-                    <li>Provider: Google LLC</li>
-                    <li>Purpose: Advertising — displaying banner and interstitial ads within the application</li>
-                    <li>Data collected: Advertising Identifier (IDFA) if the user accepts ATT; device information for ad targeting</li>
-                    <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
-                    <li><strong>Note:</strong> If you deny tracking in the ATT dialog, AdMob will only show non-personalized ads without using the IDFA</li>
+                    <li>Provider: Adapty Tech Inc.</li>
+                    <li>Purpose: Subscription status, purchase validation and the subscription screen</li>
+                    <li>Privacy Policy: <a href="https://adapty.io/privacy" target="_blank">https://adapty.io/privacy</a></li>
                 </ul>
             </div>
 
             <div class="highlight">
-                <p><strong>Google UMP SDK (User Messaging Platform):</strong></p>
+                <p><strong>App Store and Google Play:</strong></p>
                 <ul>
-                    <li>Provider: Google LLC</li>
-                    <li>Purpose: Advertising consent management for users in the European Economic Area (GDPR)</li>
-                    <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                    <li>Provider: Apple Inc. / Google LLC</li>
+                    <li>Purpose: Processing subscription payments, under their own privacy policies</li>
                 </ul>
             </div>
 
             <h3>4.2 We Do Not Sell Your Data</h3>
-            <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+            <p>We do not sell, rent, or share your personal information with third parties for their own marketing purposes.</p>
 
             <h3>4.3 Legal Requirements</h3>
             <p>We may disclose your information if required by law or in response to valid requests from public authorities.</p>
@@ -197,19 +214,21 @@
 
         <div class="section">
             <h2>5. Data Storage and Security</h2>
-            
             <h3>5.1 Local Storage</h3>
             <ul>
-                <li>Application data is stored locally on your device using CoreData and UserDefaults</li>
-                <li>Audio files remain on your device and are not synced with external servers</li>
-                <li>Exported audio files are generated entirely on your device and are only shared externally when you explicitly choose to do so via the iOS share sheet</li>
+                <li>Application data is stored locally on your device, in the application's private storage</li>
+                <li>Audio files and recordings remain on your device and are not synced with external servers</li>
+                <li>Exported audio files are generated entirely on your device and are only shared externally when you explicitly choose to do so through the system share menu</li>
             </ul>
 
-            <h3>5.2 Security</h3>
+            <h3>5.2 Data Stored on Our Servers</h3>
+            <p>Only your user profile and your conversations with the developer are stored on our servers (Google Firebase).</p>
+
+            <h3>5.3 Security</h3>
             <p>We implement reasonable security measures to protect your information:</p>
             <ul>
-                <li>Use of secure protocols (HTTPS) for communications</li>
-                <li>Secure storage of session data</li>
+                <li>All data sent over the network is encrypted in transit (HTTPS/TLS)</li>
+                <li>Each user can only read their own profile and conversations</li>
                 <li>Authentication through trusted services (Google Sign-In and Sign in with Apple)</li>
             </ul>
             <p>However, no method of Internet transmission or electronic storage is 100% secure.</p>
@@ -219,8 +238,12 @@
             <h2>6. Data Retention</h2>
             <ul>
                 <li><strong>Session data:</strong> Retained while your session is active or until you log out</li>
-                <li><strong>Local data:</strong> Retained on your device until you uninstall the application or manually delete the data</li>
+                <li><strong>Local data:</strong> Retained on your device until you uninstall the application, delete your account or manually delete the data</li>
+                <li><strong>User profile:</strong> Retained until you delete your account</li>
+                <li><strong>Conversations with the developer:</strong> Retained until you ask us to delete them or delete your account as described in Section 7.2</li>
+                <li><strong>Crash reports:</strong> Kept by Firebase Crashlytics for 90 days</li>
                 <li><strong>Analytics data:</strong> Managed by Firebase according to their retention policies</li>
+                <li><strong>Purchase records:</strong> Kept by Adapty, Apple and Google as long as needed for billing, accounting and legal obligations</li>
             </ul>
         </div>
 
@@ -231,40 +254,42 @@
                 <li><strong>Access:</strong> Request a copy of the personal data we have about you</li>
                 <li><strong>Rectify:</strong> Correct inaccurate or incomplete data</li>
                 <li><strong>Delete:</strong> Request deletion of your personal data</li>
-                <li><strong>Revoke consent:</strong> Log out and stop using the application at any time</li>
+                <li><strong>Revoke consent:</strong> Change your advertising consent, log out and stop using the application at any time</li>
             </ul>
             <p>To exercise these rights, you can:</p>
             <ul>
                 <li>Log out from the application</li>
                 <li>Delete your account through the Account screen in the app (see Section 7.1)</li>
+                <li>Request deletion without the app (see Section 7.2)</li>
                 <li>Uninstall the application to delete all local data</li>
                 <li>Contact us at the address provided in Section 11</li>
             </ul>
         </div>
 
         <div class="section">
-            <h3>7.1 Account Deletion</h3>
+            <h3 id="account-deletion">7.1 Account Deletion in the App</h3>
             <p>You can delete your account directly from within the application:</p>
             <ul>
-                <li><strong>How:</strong> Go to Account Settings → Delete Account</li>
-                <li><strong>What happens:</strong> Your account will be permanently deleted immediately</li>
-                <li><strong>Data deleted:</strong>
+                <li><strong>How:</strong> Go to Account → Delete Account and confirm (you may be asked to sign in again)</li>
+                <li><strong>What is deleted immediately:</strong>
                     <ul>
-                        <li>Your authentication credentials</li>
-                        <li>All multitracks, tracks, and audio files associated with your account</li>
-                        <li>All personal data stored in the application</li>
-                        <li>Session information</li>
+                        <li>Your account and authentication credentials</li>
+                        <li>Your user profile on our servers</li>
+                        <li>All multitracks, tracks, recordings and audio files associated with your account on the device</li>
+                        <li>Your preferences and session information</li>
                     </ul>
                 </li>
-                <li><strong>Timeline:</strong> Immediate deletion from the application and local storage</li>
-                <li><strong>Confirmation:</strong> You will receive a confirmation message once deletion is complete</li>
+                <li><strong>Confirmation:</strong> You will see a confirmation message once deletion is complete</li>
             </ul>
-            <p><strong>Note:</strong> This action cannot be undone. All your data will be permanently removed.</p>
+            <p><strong>Note:</strong> This action cannot be undone. Deleting your account does not cancel a subscription: cancel it in your App Store or Google Play subscription settings.</p>
+
+            <h3>7.2 Deletion Without the App</h3>
+            <p>If you no longer have the application, or you also want your conversations with the developer deleted, follow the steps on our <a href="delete-account.html">account deletion page</a>. We delete your account, your profile and your conversations within 30 days, and confirm it by email. Analytics and crash data are not linked to your account once it is deleted and expire under the periods in Section 6; purchase records are kept only as long as the law requires.</p>
         </div>
 
         <div class="section">
             <h2>8. Children's Privacy</h2>
-            <p>The Multitrack Player is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover that we have collected information from a minor, we will delete it immediately.</p>
+            <p>The Multitrack Player is intended for users 13 years of age and older and is not directed to children under 13. We do not knowingly collect personal information from children under 13. If we discover that we have collected information from a minor under 13, we will delete it immediately.</p>
         </div>
 
         <div class="section">
@@ -291,57 +316,34 @@
         </div>
 
         <div class="section">
-            <h2>12. Technical Details for App Store Connect</h2>
-            
-            <h3>Data Collected (according to Apple categories):</h3>
-            
-            <p><strong>Contact Information:</strong></p>
-            <ul>
-                <li>Email address (linked to user identity)</li>
-            </ul>
+            <h2>12. Summary by Store</h2>
+            <h3>12.1 App Store (Apple categories)</h3>
+            <p><strong>Data Linked to You:</strong> email address, name, user ID, product interactions (multitrack/track/playlist names, playback actions, pitch and volume adjustments, export activity), purchase history, customer support messages and photos you attach, crash and diagnostic data, approximate location (country and city).</p>
+            <p><strong>Data Used to Track You:</strong> Advertising Identifier (IDFA), only when you accept the App Tracking Transparency (ATT) dialog. If denied, the IDFA is not used and no cross-app tracking occurs.</p>
 
-            <p><strong>Identifiers:</strong></p>
+            <h3>12.2 Google Play (Data safety)</h3>
             <ul>
-                <li>User ID (linked to user identity)</li>
-            </ul>
-
-            <p><strong>Usage Data:</strong></p>
-            <ul>
-                <li>Product interactions — multitrack/track/playlist names, playback actions, pitch and volume adjustments (linked to user identity)</li>
-                <li>Export activity — format and duration (linked to user identity)</li>
-                <li>Diagnostic data (linked to user identity)</li>
-            </ul>
-
-            <p><strong>Location:</strong></p>
-            <ul>
-                <li>Approximate location (country and city) — derived automatically by Firebase from device locale and IP address (linked to user identity)</li>
-            </ul>
-
-            <p><strong>Data Used to Track You:</strong> Yes — Advertising Identifier (IDFA / Device ID) when the user accepts the App Tracking Transparency (ATT) dialog. If denied, the IDFA is not used and no cross-app tracking occurs.</p>
-
-            <p><strong>Data Linked to You:</strong></p>
-            <ul>
-                <li>Email address</li>
-                <li>User ID</li>
-                <li>Name</li>
-                <li>Usage data</li>
-                <li>Diagnostics</li>
-            </ul>
-
-            <p><strong>Tracking Data (when user accepts ATT):</strong></p>
-            <ul>
-                <li>Device Identifier (IDFA) — used by Google AdMob for personalized advertising</li>
+                <li><strong>Personal info:</strong> name, email address, user IDs — for account management and app functionality</li>
+                <li><strong>Financial info:</strong> purchase history — for app functionality (subscriptions); no payment details</li>
+                <li><strong>Location:</strong> approximate location derived from IP address — for analytics and advertising</li>
+                <li><strong>Messages and photos:</strong> messages and images you send in Talk to the Developer — for customer support</li>
+                <li><strong>App activity:</strong> app interactions and in-app actions — for analytics</li>
+                <li><strong>App info and performance:</strong> crash logs and diagnostics — for analytics and fixing issues</li>
+                <li><strong>Device or other IDs:</strong> Android Advertising ID, app instance and installation IDs, notification token — for advertising, analytics and notifications</li>
+                <li>Audio files and recordings are processed only on your device and are not collected</li>
+                <li>All data is encrypted in transit, and you can request its deletion (Section 7)</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>13. Additional Declarations</h2>
             <ul>
-                <li><strong>We do not collect financial information:</strong> The application does not process payments or store credit card information</li>
+                <li><strong>We do not collect payment details:</strong> Subscriptions are charged by Apple or Google; we never see card or bank information</li>
                 <li><strong>We do not access contacts:</strong> We do not request access to the device's contact list</li>
-                <li><strong>We do not access location:</strong> We do not collect geographic location data</li>
-                <li><strong>We do not access camera/photos:</strong> We only access audio files through the system document picker</li>
-                <li><strong>Optional ad tracking:</strong> The application requests tracking permission (ATT) to show personalized ads through Google AdMob. If you deny this permission, you will still see ads, but they will not be personalized and the IDFA will not be used. You can change this preference at any time in Settings → Privacy → Tracking.</li>
+                <li><strong>We do not access precise location:</strong> We do not request location permission; only an approximate location is derived from your IP address</li>
+                <li><strong>Microphone:</strong> Used only while you record, and recordings stay on your device</li>
+                <li><strong>Photos:</strong> Only the images you choose to attach to a message to the developer, through the system picker</li>
+                <li><strong>Optional ad personalization:</strong> On iOS through the ATT dialog, on Android through your device's ad settings, and in the EEA, UK and Switzerland through the consent form. You will still see ads in the free version, but they will not be personalized</li>
                 <li><strong>In-app browser:</strong> The chord browser can load any external website; those websites may have their own tracking technologies that are outside our control</li>
             </ul>
         </div>
